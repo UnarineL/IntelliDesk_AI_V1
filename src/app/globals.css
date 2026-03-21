@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-bg text-white antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(110, 168, 254, 0.16), transparent 28%),
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.16), transparent 26%),
+    linear-gradient(180deg, #060816 0%, #081022 52%, #050812 100%);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(110, 168, 254, 0.35) rgba(255,255,255,0.04);
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(255,255,255,0.04);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(110, 168, 254, 0.30);
+  border-radius: 9999px;
+}
+
+.grid-bg {
+  background-image: theme('backgroundImage.grid');
+  background-size: 42px 42px;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #dbeafe 0%, #8b5cf6 40%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.panel {
+  @apply border border-white/10 bg-panel backdrop-blur-xl shadow-card;
+}
+
+.panel-strong {
+  @apply border border-white/15 bg-slate-950/70 backdrop-blur-xl shadow-glow;
+}
+
+.status-dot {
+  @apply inline-block h-2.5 w-2.5 rounded-full;
+}
