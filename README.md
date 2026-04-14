@@ -1,28 +1,30 @@
-# SupportOps AI Frontend 
+# SupportOps AI
 
-This version merges all major frontend updates discussed today:
+An intelligent support intake and ticket management system designed to simplify how users submit requests and how teams handle them.
 
-- Futuristic SaaS-style UI
-- Clarification-first AI intake chat on `/submit`
-- Role-based mock access model (`end_user`, `support`, `admin`)
-- User portal routes (`/my-tickets`, `/my-tickets/[id]`)
-- Support console routes (`/dashboard`, `/tickets`, `/tickets/[id]`)
-- Ticket communication thread with public messages, internal notes, and system events
-- Mock role switcher for previewing visibility differences before real authentication is added
+---
 
-## Run locally
+## Overview
 
-```bash
-npm install
-npm run dev
-```
+SupportOps AI is built to remove confusion from traditional support processes by guiding users through a structured, AI-assisted intake flow.
 
-## Main routes
+Instead of users guessing which team to contact, the system helps clarify the request, gathers the right information, and prepares it for accurate routing and handling.
 
-- `/` Landing page
-- `/login` Role preview / mock access selector
-- `/submit` Guided intake with clarification-first AI chat
-- `/my-tickets` End-user ticket list
+---
+
+## Key Features
+
+### AI-Assisted Request Intake
+A guided, clarification-first chat experience that helps users describe their issue clearly before submitting a ticket.
+
+### Structured Ticket System
+Tickets are organized with clear communication threads, including:
+- Public messages (visible to users)
+- Internal notes (visible to support teams only)
+- System events (status updates and actions)
+
+### Role-Based Experience
+Different views based on user roles- `/my-tickets` End-user ticket list
 - `/my-tickets/[id]` End-user ticket detail + public thread
 - `/dashboard` Support operations dashboard
 - `/tickets` Support ticket queue
